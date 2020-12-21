@@ -1,0 +1,112 @@
+# 2주차_2강(5강)
+# 덧셈
+import random
+x = random.randint(1, 9)
+y = random.randint(1, 9)
+z = x+y
+
+user = eval(input("숫자를 입력해 주세요: "))
+if user == z:
+  print("참 잘했어요")
+else:
+  print("{} + {} = {}입니다".format(x, y, z))
+  
+# 사칙연산
+import random
+x = random.randint(1, 9)
+y = random.randint(1, 9)
+
+method = random.randint(1, 4)
+if method == 1:
+  str = '+'
+  z = x + y
+
+elif method == 2:
+  str = '-'
+  z = abs(x - y)
+
+elif method == 3:
+  str = '*'
+  z = x * y
+
+else: 
+  str = '//'
+  z = x // y
+
+
+user = eval(input("숫자를 입력해 주세요: "))
+if user == z:
+  print("참 잘했어요")
+else:
+  print(("{} {} {} = {}입니다".format(x, str, y, z)))
+  
+# 천간, 지지
+
+year = eval(input("년도를 입력해주세요: "))
+
+div10 = year % 10
+div12 = year % 12
+
+if div10 == 0:
+  first = "경"
+elif div10 == 1:
+  first = "신"
+elif div10 == 2:
+  first = "임"
+elif div10 == 3:
+  first = "계"
+elif div10 == 4:
+  first = "갑"
+elif div10 == 5:
+  first = "을"
+elif div10 == 6:
+  first = "병"
+elif div10 == 7:
+  first = "정"
+elif div10 == 8:
+  first = "무"
+else:
+  first = "기"
+
+if div12 == 0:
+  second = "신"
+elif div12 == 1: 
+  second = "유"
+elif div12 == 2: 
+  second = "술"
+elif div12 == 3: 
+  second = "해"
+elif div12 == 4: 
+  second = "자"
+elif div12 == 5: 
+  second = "축"
+elif div12 == 6: 
+  second = "인"
+elif div12 == 7: 
+  second = "묘"
+elif div12 == 8: 
+  second = "진"
+elif div12 == 9: 
+  second = "사"
+elif div12 == 10: 
+  second = "오"
+else: 
+  second = "미"
+
+print("{}{}년".format(first,second))
+
+# 근로 소득세
+earn = int(input("소득금액을 입력하세요: "))
+
+if earn <= 12000000:
+  tax = earn * 0.06
+elif earn <= 46000000:
+  tax = 720000 + (earn - 12000000) * 0.15
+elif earn <=88000000:
+  tax = 5820000 + (earn - 46000000) * 0.24
+elif earn <= 150000000:
+  tax = 15900000 + (earn - 88000000) * 0.35
+else:
+  tax = 37600000 + (earn - 150000000) * 0.38
+
+print("근로소득세는 {}원 입니다".format(tax))
