@@ -1,0 +1,93 @@
+# 2주차_3강(6강)#
+
+count = 1
+while count <= 10:
+  print("hello world")
+  count += 1
+print("end")
+
+# 1부터 100까지 정수들의 합
+isum = 0
+num = 1
+while num <= 100:
+  isum = isum + num
+  num = num + 1
+print("sum =", isum)
+
+# 100 이하의 홀수 출력
+num = 1
+while num <= 100:
+  print(num)
+  num = num +2
+
+# 100 이하의 3의 배수 출력
+num = 3
+while num <= 100:
+  print(num)
+  num += 3
+  
+  # 사칙연산 10번 맞출 때까지
+import random
+correct_num = 0
+while correct_num < 10:
+  x = random.randint(1, 9)
+  y = random.randint(1, 9)
+  method = random.randint(1, 4)
+
+  if method == 1:
+    str = '+'
+    z = x + y
+
+  elif method == 2:
+    str = '-'
+    z = abs(x - y)
+
+  elif method == 3:
+    str = '*'
+    z = x * y
+
+  else: 
+    str = '//'
+    z = x // y
+
+
+  user = eval(input("숫자를 입력해 주세요: "))
+  if user == z:
+    print("참 잘했어요")
+    correct_num += 1
+    
+  else:
+    print(("{} {} {} = {}입니다".format(x, str, y, z)))
+print("end")
+
+# 센티넬을 이용한 반복 횟수 제어
+point = eval(input("점수 입력(음수이면 종료): "))
+p_sum = 0
+while point >= 0:
+  p_sum += point
+  point = eval(input("점수 입력(음수이면 종료): "))
+print("sum =", p_sum)
+
+# 루트 n의 값 구하기
+n = eval(input("n: "))
+i = 1
+root = n/2
+while i < 100:
+  root = (root + n/root)/2
+  i += 1
+print(root, root*root, n)
+
+# 소수인지 판단하기
+n = eval(input("숫자를 입력하세요: "))
+
+a = 2
+count = 0
+while a < n:
+  if n % a == 0:
+    count += 1
+  a += 1
+
+if count == 0:
+  print(n,"은 소수이다")
+else:
+  print(n,"은 소수가 아니다")
