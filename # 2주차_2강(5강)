@@ -1,4 +1,4 @@
-# 2주차_2강(5강)
+# 2주차_2강(5강)#
 # 덧셈
 import random
 x = random.randint(1, 9)
