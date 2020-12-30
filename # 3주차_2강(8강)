@@ -1,0 +1,37 @@
+# 3주차_2강(8강)#
+# 합을 계산하는 함수
+def isum(i1, i2):
+  val = 0
+  for i in range(i1, i2+1):
+    val += i
+  return val
+
+print(isum(1, 100))
+print(isum(50, 120))
+print(isum(30, 90))
+
+# mutable & immutable
+def change(i1, i2):
+  i1 = 5
+
+a = 1
+b = 10
+change(a, b)
+print(a)
+
+# 십진수를 16진수로 바꾸기
+def decToHex(decVal):
+  hexStr = ''
+  while decVal != 0:
+    hexVal = decVal % 16
+    hexStr = hexChar(hexVal) + hexStr
+    decVal = decVal//16
+  return hexStr
+
+def hexChar(hexVal):
+  if hexVal < 10:
+    return chr(ord('0') + hexVal)
+  else:
+    return chr(ord('a') + hexVal - 10)
+
+decToHex(1261)
