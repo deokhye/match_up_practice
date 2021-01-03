@@ -1,0 +1,21 @@
+# 3주차 3강(9강)#
+# global
+x = 10
+def f():
+  global x
+  x = x * 2 
+  print(x)
+f()
+print(x)
+
+# default 인수
+def f(a, b=2, c=1):
+  print(a,b,c)
+
+f(1)
+f(1, 2)
+f(1, 2, 3)
+
+def f(a, b):
+  return a+b, a-b, a*b, a//b
+f(10, 2)
